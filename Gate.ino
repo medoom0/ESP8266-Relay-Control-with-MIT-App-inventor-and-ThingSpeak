@@ -1,11 +1,12 @@
 #include <ESP8266WiFi.h>
 #include <ThingSpeak.h> 
-#define relay   12         
-const char* ssid = "Regina Phalange.";      // Replace with your WiFi network name
-const char* password = "arman@123";  // Replace with your WiFi network password
-unsigned long ChannelNumber = 2121482;                // Channel ID
-const char * ReadAPIKey = "R83CD7J2OOT5L3MN";      // Read API Key
-const char * WriteAPIKey = "7PD3HZY0TI5JODZF";      // Read API Key
+#define relay   12 
+const char* SSID = "Your_WiFi_Name";  Replace with your WiFi network name
+const char* PASSWORD = "Your_WiFi_Password";     Replace with your WiFi network password
+const unsigned long CHANNEL_ID = 1234567; // Replace with your ThingSpeak Channel ID
+const char* READ_API_KEY = "XXXXXXXXXX";  Replace with your ThingSpeak keys 
+const char* WRITE_API_KEY = "XXXXXXXXXX"; Replace with your ThingSpeak keys
+
 const int FieldNumber1 = 1; 
 WiFiClient client;
 bool relayTriggered = false; // keep track of whether the relay has been triggered or not
