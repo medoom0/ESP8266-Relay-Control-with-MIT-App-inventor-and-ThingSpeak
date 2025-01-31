@@ -24,7 +24,7 @@ This project allows users to remotely control a relay connected to an ESP8266 mo
 
 ## Setup & Configuration
 ### 1 Create a ThingSpeak Channel
-![App Screenshot](Screenshot 2025-01-31 164859.png)
+![alt text](<Screenshot 2025-01-31 164859.png>)
 1. Go to [ThingSpeak](https://thingspeak.com) and sign in.
 2. Click "New Channel" and create a field (Field 1) to store relay control data.
 3. Note the Channel ID, Read API Key, and Write API Key.
@@ -45,6 +45,7 @@ const char* READ_API_KEY = "READ_API_KEY";
 const char* WRITE_API_KEY = "WRITE_API_KEY";   
 ```
 ### 5 Build the Android App with MIT App Inventor
+![alt text](photo_2025-01-31_19-17-43.jpg)
 1. Open MIT App Inventor and create a new project.
 2. Add the following UI components:
 3. Button: To turn the relay ON/OFF.
