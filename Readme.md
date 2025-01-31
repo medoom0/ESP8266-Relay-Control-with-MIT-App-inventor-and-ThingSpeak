@@ -45,17 +45,17 @@ const char* READ_API_KEY = "READ_API_KEY";
 const char* WRITE_API_KEY = "WRITE_API_KEY";   
 ```
 ### 5 Build the Android App with MIT App Inventor
-#### Open MIT App Inventor and create a new project.
-#### Add the following UI components:
-#### Button: To turn the relay ON/OFF.
-#### Label: To display status messages.
-#### Web Component: To send HTTP requests to ThingSpeak.
-#### Use the Web Component to send a request to ThingSpeak:
-#### ON Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=1
-#### OFF Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=0
-#### Test the app on your phone and deploy it.
+1. Open MIT App Inventor and create a new project.
+2. Add the following UI components:
+3. Button: To turn the relay ON/OFF.
+4. Label: To display status messages.
+5. Web Component: To send HTTP requests to ThingSpeak.
+6. Use the Web Component to send a request to ThingSpeak:
+7. ON Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=1
+8. OFF Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=0
+9. Test the app on your phone and deploy it.
 ## How It Works
-#### The user presses the ON button in the Android app.
-#### The app sends a request to ThingSpeak, updating Field 1 to 1.
-#### The ESP8266 reads this field and triggers the relay.
-#### The ESP8266 then resets the field back to 0, ensuring the relay is ready for the next command.
+1. The user presses the ON button in the Android app.
+2. The app sends a request to ThingSpeak, updating Field 1 to 1.
+3. The ESP8266 reads this field and triggers the relay.
+4. The ESP8266 then resets the field back to 0, ensuring the relay is ready for the next command.
