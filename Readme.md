@@ -23,19 +23,39 @@ This project allows users to remotely control a relay connected to an ESP8266 mo
 - ThingSpeak (for cloud-based communication)
 
 ## Setup & Configuration
-### 1️⃣ Create a ThingSpeak Channel
+### 1 Create a ThingSpeak Channel
 
 1. Go to [ThingSpeak](https://thingspeak.com) and sign in.
 2. Click "New Channel" and create a field (Field 1) to store relay control data.
 3. Note the Channel ID, Read API Key, and Write API Key.
 
-### 2️⃣ Flash ESP8266 with Arduino Code
+### 2 Flash ESP8266 with Arduino Code
 
 1. Install the ESP8266 board package in the Arduino IDE.
 2. Install the ThingSpeak and ESP8266WiFi libraries.
 3. Upload the following Arduino Sketch to your ESP8266:
-### 2️⃣ Replace with your WiFi Credentials
+### 3 Replace with your WiFi Credentials
 ```cpp
 const char* SSID = "Your_WiFi_Name";  
 const char* PASSWORD = "Your_WiFi_Password";  
 ```
+### 4 Replace with your ThingSpeak API Keys
+```cpp
+const char* READ_API_KEY = "READ_API_KEY";  
+const char* WRITE_API_KEY = "WRITE_API_KEY";   
+```
+### 5 Build the Android App with MIT App Inventor
+#### Open MIT App Inventor and create a new project.
+#### Add the following UI components:
+#### Button: To turn the relay ON/OFF.
+#### Label: To display status messages.
+#### Web Component: To send HTTP requests to ThingSpeak.
+#### Use the Web Component to send a request to ThingSpeak:
+#### ON Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=1
+#### OFF Button: https://api.thingspeak.com/update?api_key=YOUR_WRITE_API_KEY&field1=0
+#### Test the app on your phone and deploy it.
+## How It Works
+#### The user presses the ON button in the Android app.
+#### The app sends a request to ThingSpeak, updating Field 1 to 1.
+#### The ESP8266 reads this field and triggers the relay.
+#### The ESP8266 then resets the field back to 0, ensuring the relay is ready for the next command.
