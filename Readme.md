@@ -15,7 +15,7 @@ This project allows users to remotely control a relay connected to an ESP8266 mo
 - Relay Module (5V or 3.3V compatible)
 - Power Supply (5V/2A for ESP8266 & Relay)
 - Connecting Wires
-- 
+
 ### Software & Platforms
 
 - MIT App Inventor (for building the Android app)
